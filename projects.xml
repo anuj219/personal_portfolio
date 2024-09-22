@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <projects>
+        <time>Aug 24</time>
+        <title>Cafe Website</title>
+        <desc>Created a Static website that takes user inputs and performs form validation to allow or deny access. 
+        Provides bill along with the Price breaks. Used JavaScript.</desc>
+        <link><![CDATA[http://127.0.0.1:5500/web_dev/Html/prac_college/Tea_Stall/Tea_Stall.html]]></link>
+        <tech perc="20">JavaScript</tech>
+        <tech perc="80">CSS</tech>
+    </projects>
+    <projects>  
+        <time>Aug 24</time>
+        <title>Live Time Table</title>
+        <desc>Created a live time table that takes in system date and time to give the current ongoing class. Used 
+        JavaScript, BootStrap.</desc>
+        <link><![CDATA[http://127.0.0.1:5500/Html/prac_college/TimeTable%20Practical/Live_Time_table.html]]></link>
+        <tech perc="50">JavaScript</tech>
+        <tech perc="30">CSS</tech>
+        <tech perc="20">BootStrap</tech>
+    </projects>
+    <projects>
+        <time>Sept 24</time>
+        <title>Movie Rating Website</title>
+        <desc>A website that gives some famous movies along with their rating, description, star-cast and trailers. Used Ajax for asynchronous data fetching and XML for database</desc>
+        <link><![CDATA[http://127.0.0.1:5500/Html/xml/mov_database_xml.html]]></link>
+        <tech perc="25">AJAX</tech>
+        <tech perc="2">CSS</tech>
+        <tech perc="48">XML</tech>
+        <tech perc="25">JQuery</tech>
+    </projects>
+    <projects>
+        <time>Nov 24</time>
+        <title>News Website</title>
+        <desc>A website that gives recent news, along with the current date time, with images of the particular news.</desc>
+        <link><![CDATA[http://127.0.0.1:5500/Html/xml/mov_database_xml.html]]></link>
+        <tech perc="80">CSS</tech>
+        <tech perc="10">HTML</tech>
+        <tech perc="10">JQuery/JS</tech>
+    </projects>
+</project>

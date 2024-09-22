@@ -1,0 +1,21 @@
+i know this transition applies when shrink class is added to navbar
+but when shrink is removed, i dont understand 
+how the same transition is working here
+shouldnt there be a transition in .shrink class so when navbar shifts from shrink to this class... shrink's transition wouldve been used
+
+
+github rep for portfolio projects
+
+sticky didnt work ... had to use Fixed positioning
+
+
+used :
+    transform
+    catching scrolls (for navbar transition)
+    scroll behavior (on the whole document (*) | makes scrolling smoother when jumping to sections)
+    fixed positioning for sticky effect
+    very imp use of parent-relative ---> child-absolute  so child gets free positioning but only relative to the parent
+    imp use of border-top/bottom-left/right-radius (give curve to a specific border part only)
+
+    JS and Jquery
+    for tech used bar in project section

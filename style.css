@@ -1,0 +1,572 @@
+/* CSS for landing page index.html   */
+
+* {
+    margin: 0px;
+    padding: 0px;
+
+    /* using this makes jumping from one section to the ohter(using menu-links) smoother */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(255, 208, 137);
+    font-family: 'Nunito';
+    background-image: url();
+    /*From google fonts*/
+}
+
+
+header {
+    position: sticky !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    z-index: 100;
+}
+
+.blur {
+    /* class for blurring the page when sections links opened (menu-links) */
+    filter: blur(5px);
+}
+main{
+    transition: filter 0.5s ease;
+}
+
+#navbar {
+    width: 50%;
+    display: flex;
+    /* two extreme points */
+    justify-content: space-between;
+
+    /* mostly :  even space on all sides */
+    /* justify-content: space-evenly; */
+
+    /* same amount of space for all elements, half of that space on either end  */
+    justify-content: space-around;
+    /*horizontal alignment (in case of row) */
+    align-items: center;
+    /*ver1tical alignment (in case of row)*/
+
+    background-color: rgb(90, 59, 12);
+    border-radius: 40px;
+    color: white;
+    height: 70px;
+    transition: width 1.4s ease 0.8s, border-radius 1.4s ease;
+    /* i know this transition applies when shrink class is added to navbar */
+    /*, but when shrink is removed, i dont understand */
+    /*  how the same transition is working here*/
+    /* shouldnt there be a transition in .shrink class so when navbar shifts from shrink to this class... shrink's transition wouldve been used */
+
+    hr{
+        background-color: #5a3b0c;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+
+        li {
+            list-style: none;
+            margin: 0px 23px;
+            /*   x y         axis*/
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: rgb(185, 185, 185);
+        }
+    }
+
+    .left {
+        margin-left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .end {
+        cursor: pointer;
+        margin-right: 15px;
+        font-size: 1rem;
+        position: relative;
+    }
+    #up{
+        /* css for arrow that takes you back up when scrolled (User Accessibility) */
+        position: fixed;
+        top: 20%;
+        right: 2vw;
+        z-index: 100;
+
+        a{
+            text-decoration: none;
+            color: #5a3b0c;
+        }
+        transition: transform 0.3s ease;
+    }
+    #up:hover{
+        transform: scale(1.5);
+    }
+
+    .end:hover {
+        color: rgb(174, 174, 174);
+    }
+
+
+    /* drop down section link */
+    .menu-links {
+        z-index: 101;
+        /* using z-index just for the blur feature */
+
+        display: none;
+        position: absolute;
+        top: 9vh;
+        right: -4vw;
+        background-color: rgb(0, 0, 0, 0.7);
+        /* This 0.7 helps to get transparent background          the a in rgba stands for alpha which controls the opacity of the color */
+        /* Translucent background */
+        padding: 10px;
+        border-radius: 5px;
+
+        ul {
+            display: inherit;
+            /*inherits from .menu-link's display property */
+            list-style: none;
+            padding: 0;
+            margin: 10px;
+        }
+
+        li {
+            margin: 10px 10px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! IMP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/*  usefull border radius used here */
+/* css for the navbar to increase width when window is scrolled for 30px */
+.shrink {
+    width: 100% !important;
+    /* Set the navbar to 50% of the page width */
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    /* wasnt working without important ,after i removed #navbar.shrink and changed to .shrink*/
+}
+
+
+.menu-links:hover {
+    cursor: pointer;
+}
+
+
+.firstsect {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    /*Horizontal alignment*/
+    margin: 23px 0px;
+
+    .rightsect {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            position: relative;
+            bottom: 170px;
+            right: -150px;
+            transform: scaleX(-1);
+            /* flips the image */
+        }
+
+        .line {
+            transform: rotate(90deg);
+            height: 250px;
+            width: 10px;
+            position: relative;
+            top: 139px;
+            right: 200px;
+        }
+
+        .outer {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+
+
+            .flag-effect {
+                position: relative;
+                right: 26vw;
+                top: 50px;
+                z-index: -1;
+
+                color: rgba(153, 114, 61, 0.8);
+                font-size: 2rem;
+                transform: rotate(90deg);
+            }
+        }
+
+
+    }
+
+    .leftsect {
+        font-size: 2rem;
+        color: rgb(90, 59, 12);
+
+        #name {
+            color: white;
+        }
+
+        #element {
+            color: white;
+        }
+
+        #bio {
+            font-size: 1rem;
+            position: relative;
+            top: 100px;
+
+            #grey {
+                color: rgb(153, 114, 61);
+            }
+        }
+    }
+}
+
+.secondsect {
+    background-color: rgb(236, 190, 121);
+    color: black;
+    margin-top: 28vh;
+    /* max-width: 80vw; */
+    padding-left: 7vw;
+    /* margin: auto; */
+    height: 60vh;
+
+
+
+    #sub {
+        color: rgb(125, 122, 122);
+    }
+
+    .box {
+        background-color: rgb(90, 59, 12);
+        width: 80vw;
+        height: 2px;
+        margin: 50px 0px;
+
+        display: flex;
+        flex-direction: row;
+        /* align-items: center;         will come between the horizontal line(.box wala)*/
+        justify-content: space-between;
+
+        .vertical {
+            height: 9vh;
+            width: 2px;
+            background-color: rgb(90, 59, 12);
+
+            display: flex;
+            flex-direction: column;
+
+            .icons {
+                position: relative;
+                bottom: 27px;
+            }
+
+            .title {
+                position: relative;
+                top: 40px;
+                width: 150px;
+            }
+
+            .content {
+                position: relative;
+                top: 48px;
+                color: rgb(103, 73, 27);
+                font-size: 0.83rem;
+                width: 11vw;
+            }
+        }
+    }
+
+}
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*vertical alignment (in case of col)*/
+    align-items: center;
+    /*horizontal alignment (in case of  col*/
+
+    background-color: rgb(103, 73, 27);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    color: rgb(149, 119, 75);
+
+    .fa-circle {
+        margin: 1.3px;
+        font-size: 5px;
+    }
+}
+
+.social {
+    position: fixed;
+    top: 200px;
+    left: -107px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+
+    .in > a{
+        cursor: pointer;
+    }
+    .in {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        border: 0.2px solid brown;
+        border-radius: 10px;
+        width: 100%;
+        margin-bottom: 5px;
+        padding: 10px;
+        transition: all 0.8s ease;
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .textt {
+            font-size: 0.7em;
+        }
+
+    }
+
+    .in:hover {
+        /* position: relative;
+        left: 55px; */
+
+        /* moves the element to the right */
+        transform: translateX(55px);
+        /* other attributes-    scale sx,sy   rotate(deg)     skewX,Y(deg)*/
+
+        /* transform: translateX(55px)  skewY(10deg); */
+        box-shadow: 0 8px 4px rgb(0, 0, 0, 0.6);
+    }
+
+}
+
+
+
+
+
+.about>hr {
+    position: relative;
+    top: 0px;
+}
+
+.about {
+    margin-bottom: 25vh !important;
+}
+
+.sects {
+    border-top: 2px solid rgb(161, 107, 0);
+    color: black;
+    margin-top: 5vh !important;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .text {
+        text-align: justify;
+    }
+
+    #sub {
+        color: rgb(125, 122, 122);
+    }
+
+    scroll-margin-top: 100px;
+    /* Adjust this value according to your navbar height */
+    /* used this as anchor links were navigating the sects to the top, hiding them behind the navbar */
+
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* This creates a custom easing effect that can be more dynamic than standard ease-in or ease-out transitions. */
+
+}
+
+.sects:hover {
+    background-color: rgb(236, 190, 121);
+    border: 2px solid rgb(239, 187, 110);
+    border-top: 7px solid rgb(161, 107, 0);
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.content1 {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.content-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 1;
+    margin-bottom: 13px;
+    padding: 10px;
+    z-index: -1;
+
+    border: 1px solid transparent;
+    border-top: 0.3px solid #5a3b0c;
+    border-radius: 20px;
+    transition: all 0.3s ease-in;
+}
+
+.content-boxes:hover {
+    border: 2px solid rgb(247, 213, 163);
+    background-color: rgb(249, 210, 152);
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2);
+
+    .left1 {
+        color: rgb(250, 174, 59);
+        /* translate: 20% 0px; */
+    }
+
+    .title1 {
+        font-size: 1.2rem;
+    }
+
+    .desc1 {
+        font-size: 0.875rem;
+    }
+
+    .tech {
+        background-color: rgb(236, 190, 121);
+        border: 1px solid rgb(229, 137, 0);
+        border-radius: 20px;
+
+    }
+}
+
+.left1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: rgb(184 111 0);
+    transition: all 0.3s ease-in;
+}
+
+.time1,
+.tech_title {
+    flex: 1;
+}
+
+.right1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    line-height: 1.5;
+
+    .title1 {
+        transition: all 0.3s ease;
+    }
+}
+
+.desc1 {
+    font-size: 0.775rem;
+}
+
+.main_tech {
+    display: flex;
+    flex-direction: row;
+    /* so as to align the tech, bar and percentage in line */
+    align-items: center;
+    position: relative;
+}
+
+.tech {
+    display: flex;
+    max-width: 30%;
+    min-width: 30%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 2px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+
+    transition: all 0.3s ease;
+}
+
+.bar {
+    content: " ";
+    position: absolute;
+    /* this and position relative of tech makes the span be positioned absolutely, BUT inside the tech box only, nowhere else */
+    /* Relative or static will not give .bar the whole space of tech box .. absolute helps us to get the whole space by going behind the tech box and give the slide effect (background color of .tech should be transparent for this to work) */
+    top: 0px;
+    left: 0px;
+    width: 0;
+    /* Initial width */
+    background-color: rgb(90 59 12);
+    /* Initial color */
+    border: 1px solid transparent;
+    height: 100%;
+    /* Adjust as needed */
+    z-index: -1;
+    transition: width 0.5s ease, background-color 0.5s ease;
+    /* Smooth transition */
+}
+
+.percentage {
+    position: absolute;
+    left: 41%;
+    font-weight: bold;
+    color: #5a3b0c;
+    font-size: 0.7rem;
+    opacity: 0;
+    transition: opacity 0.5s ease 0.3s;
+    /* ^ this adds delay to the transition */
+}
+
+
+/*
+#cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(222, 148, 39, 0.5) 0%, transparent 80%);
+    transform: translate(50%, 50%);
+    pointer-events: none; /* Ensures it doesn't interfere with click events */
+/* z-index: -5; Keep it behind other content */
+/* transition: transform 0.1s ease-out; */

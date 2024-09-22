@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal-Website.Anuj</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet"> <!-- Google Fonts - Nunito Sans  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+    <!-- typeJS is javascript's animation library -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- TypeJS cdn  -->
+
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(255, 208, 137);
+            font-family: 'Nunito';
+            /*From google fonts*/
+        }
+
+
+        nav {
+            display: flex;
+            /* two extreme points */
+            justify-content: space-between;
+
+            /* mostly :  even space on all sides */
+            /* justify-content: space-evenly; */
+
+            /* same amount of space for all elements, half of that space on either end  */
+            /* justify-content: space-around;   horizontal alignment (in case of row) */
+            align-items: center;
+            /*ver1tical alignment (in case of row)*/
+
+            background-color: rgb(90, 59, 12);
+            color: white;
+            height: 70px;
+
+            ul {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    list-style: none;
+                    margin: 0px 23px;
+                    /*   x y         axis*/
+                }
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+
+                a:hover {
+                    color: rgb(185, 185, 185);
+                }
+            }
+
+            .left {
+                margin-left: 15px;
+                font-size: 1.5rem;
+            }
+
+            .end {
+                cursor: pointer;
+                margin-right: 15px;
+                font-size: 1rem;
+            }
+
+            .end:hover {
+                color: rgb(174, 174, 174);
+            }
+
+            /* drop down section link */
+            .menu-links {
+                display: none;
+                position: absolute;
+                top: 50px;
+                right: 10px;
+                background-color: rgb(0, 0, 0, 0.7);
+                /* This 0.7 helps to get transparent background          the a in rgba stands for alpha which controls the opacity of the color*/
+                /* Translucent background */
+                padding: 10px;
+                border-radius: 5px;
+
+                ul {
+                    display: inherit;
+                    /*inherits from .menu-link's display property */
+                    list-style: none;
+                    padding: 0;
+                    margin: 10px;
+                }
+
+                li {
+                    margin: 10px 10px;
+                }
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+
+        }
+
+
+        .firstsect {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            /*Horizontal alignment*/
+            margin: 23px 0px;
+
+            .rightsect {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    position: relative;
+                    bottom: 170px;
+                    right: -150px;
+                    transform: scaleX(-1);
+                    /* flips the image */
+                }
+
+                .line {
+                    transform: rotate(90deg);
+                    height: 250px;
+                    position: relative;
+                    top: 137px;
+                    right: 200px;
+                }
+
+                .outer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+
+
+                    .flag-effect {
+                        position: relative;
+                        right: 24vw;
+                        top: 50px;
+                        z-index: -1;
+
+                        color: rgba(153, 114, 61, 0.8);
+                        font-size: 2rem;
+                        transform: rotate(90deg);
+                    }
+                }
+
+
+            }
+
+            .leftsect {
+                font-size: 2rem;
+                color: rgb(90, 59, 12);
+
+                #name {
+                    color: white;
+                }
+
+                #element {
+                    color: white;
+                }
+
+                #bio {
+                    font-size: 1rem;
+                    position: relative;
+                    top: 100px;
+
+                    #grey {
+                        color: rgb(153, 114, 61);
+                    }
+                }
+            }
+        }
+
+        .secondsect {
+            background-color: rgb(236, 190, 121);
+            color: black;
+            margin-top: 28vh;
+            /* max-width: 80vw; */
+            padding-left: 7vw;
+            /* margin: auto; */
+            height: 60vh;
+
+
+
+            #sub {
+                color: rgb(125, 122, 122);
+            }
+
+            .box {
+                background-color: rgb(90, 59, 12);
+                width: 80vw;
+                height: 2px;
+                margin: 50px 0px;
+
+                display: flex;
+                flex-direction: row;
+                /* align-items: center;         will come between the horizontal line(.box wala)*/
+                justify-content: space-between;
+
+                .vertical {
+                    height: 9vh;
+                    width: 2px;
+                    background-color: rgb(90, 59, 12);
+
+                    display: flex;
+                    flex-direction: column;
+
+                    .icons {
+                        position: relative;
+                        bottom: 27px;
+                    }
+
+                    .title {
+                        position: relative;
+                        top: 40px;
+                        width: 150px;
+                    }
+
+                    .content {
+                        position: relative;
+                        top: 48px;
+                        color: rgb(103, 73, 27);
+                        font-size: 0.83rem;
+                        width: 11vw;
+                    }
+                }
+            }
+
+        }
+
+        footer {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /*vertical alignment (in case of col)*/
+            align-items: center;
+            /*horizontal alignment (in case of  col*/
+
+            background-color: rgb(103, 73, 27);
+            color: rgb(149, 119, 75);
+
+            .fa-circle {
+                font-size: 5px;
+            }
+        }
+
+        .social {
+            position: fixed;
+            top: 200px;
+            left: -107px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 10%;
+
+            .in {
+                cursor: pointer;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                border: 0.2px solid brown;
+                border-radius: 10px;
+                width: 100%;
+                margin-bottom: 5px;
+                padding: 10px;
+                transition: transform 1s ease;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+
+                .textt {
+                    font-size: 0.7em;
+                }
+
+            }
+
+            .in:hover {
+                /* position: relative;
+                left: 55px; */
+
+                /* moves the element to the right */
+                transform: translateX(55px);
+                /* other attributes-    scale sx,sy   rotate(deg)     skewX,Y(deg)*/
+
+                /* transform: translateX(55px)  skewY(10deg); */
+                box-shadow: 0 8px 4px rgb(0, 0, 0);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="social">
+        <div id="insta" class="in">
+            <a href="https://www.instagram.com/anuj_v_mehta219/">
+                <span class="textt">Instagram</span>
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        <div id="git" class="in">
+            <a href="https://github.com/anuj219">
+                <span class="textt">GitHub</span>
+                <i class="fa-solid fa-code-pull-request"></i>
+            </a>
+        </div>
+        <div id="lin" class="in">
+            <a href="https://www.linkedin.com/in/anuj-mehta-1b120622a/">
+                <span class="textt">LinkedIn</span>
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <header>
+        <nav>
+            <div class="left">Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="end"><i class="fa fa-bars" id="menu-icon" onclick="toggle_menu()"></i></div>
+            <div class="menu-links" id="menu-links">
+                <ul>
+                    <li><a href="#firstsect">Me</a></li> <!-- These are know as anchor/ jump links-->
+                    <hr size="0.5px">
+                    <li><a href="#secondsect">Skills</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="firstsect" id="firstsect">
+            <div class="leftsect">
+                <div>Hello there ! This is <span id="name">Anuj Mehta</span></div>
+                <div>
+                    I am a <br>
+                    < <!-- this < is for the website decor... DONT REMOVE-->
+                </div>
+                <span id="element">
+                    <div>
+                    </div>
+                </span>
+                <div id="bio">
+                    <p><i class="fa fa-graduation-cap" aria-hidden="true" style="font-size: 25px;"></i></p>
+                    <hr size="3px" color="rgb(90, 59, 12)">
+                    <a href="https://xaviers.ac/" style="text-decoration: none; color: rgb(103, 73, 27);">
+                        <p>
+                            &nbsp<i class="fa-solid fa-location-dot" style="font-size: 10px;"></i> St Xaviers College,
+                            Mumbai
+                        </p>
+                    </a>
+
+                    <a href="https://itdept.xaviers.edu/" style="text-decoration: none; color: rgb(103, 73, 27);">
+                        <p>
+                            <i class="fa fa-laptop-code" aria-hidden="true" style="font-size: 10px;"></i>
+                            Computer Science (<small id="grey">Bachelors of Science in Information
+                                Technology</small>)
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="rightsect">
+                <img src="a1.png" alt="normal" id="image">
+                <hr class="line" size="3px" color="brown">
+                <div class="outer">
+                    <div class="flag-effect">Byte sized humor <br> meets Big dreams </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="secondsect" id="secondsect">
+            <hr size="2px" color="rgb(90, 59, 12)">
+            <h1>Skills</h1>
+            <div id="sub">kuch nahi aata</div>
+
+            <div class="box">
+                <div class="vertical">
+                    <i class="fa-solid fa-code icons"></i>
+                    <div class="title">
+                        Web Development
+                    </div>
+                    <div class="content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, exercitationem?
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-user-secret icons"></i>
+                    <div class="title">
+                        Cyber-Security
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, rerum!
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-shield icons"></i>
+                    <div class="title">
+                        FireWall Dev
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, rerum!
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-microchip icons"></i>
+                    <div class="title">
+                        Computer-Architecture
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, rerum!</div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-network-wired icons"></i>
+                    <div class="title">
+                        Network Engineering
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, rerum!</div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-bug-slash icons"></i>
+                    <div class="title">
+                        Debug Analysis
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, rerum!</div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-gears icons"></i>
+                    <div class="title">
+                        Systems Management
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, rerum!</div>
+                </div>
+            </div> <!-- End of Box (flow-chart type)-->
+        </section> <!-- End of Second Sect-->
+
+        <footer>
+            <span><i class="fa fa-circle" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i><i
+                    class="fa fa-circle" aria-hidden="true"></i></span>
+            <div><i class="fa fa-envelope" aria-hidden="true"></i> notyourcupoftea@gmail.com</div>
+            <div><i class="fa fa-copyright" aria-hidden="true"></i>copyrights www.anujmehta.isnotsmart.com | All rights
+                reserved</div>
+        </footer>
+    </main>
+
+
+
+
+    <!-- Script req for - Type JS animation -->
+    <!-- imported from github link from google -->
+    <script>
+        var typed = new Typed('#element',
+            {
+                strings: ['Web Developer', 'Graphic Designer', 'Python/Java/C++ programmer', 'R/SQL coder', 'Professional Digital Artist', 'and', 'Human'],
+                //  An array of strings that will be typed out one after another.
+                typeSpeed: 44,
+                cursorChar: ' >'
+                // It will type out each string in the strings array one by one at the speed specified by typeSpeed.
+            }
+        );
+    </script>
+
+    <script>
+
+        // functions to change the image when user hovers on 'haha!' (id: change) and revert back once hover removed
+        function change_img() {
+            var changer = document.createElement('img');
+            changer.src = 'a2.png';
+            changer.alt = 'normal';
+            changer.id = 'image';
+
+            var toBeChanged = document.getElementById('image');
+            toBeChanged.replaceWith(changer);
+        }
+        function revert_img() {
+            var changer = document.createElement('img');
+            changer.src = 'a1.png';
+            changer.alt = 'not_normal';
+            changer.id = 'image';
+
+            var toBeChanged = document.getElementById('image');
+            toBeChanged.replaceWith(changer);
+        }
+        document.getElementById('element').addEventListener('mouseover', change_img);
+        document.getElementById('element').addEventListener('mouseout', revert_img);
+
+        // function to display the jump/anchor links (links navigating within the page), when clicked on the 3 bars 
+        //on the right end of navbar
+        function toggle_menu() {
+            var menu_dis = document.getElementById('menu-links');
+            if (menu_dis.style.display === 'none') {
+                menu_dis.style.display = 'block';
+            }
+            else {
+                menu_dis.style.display = 'none';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

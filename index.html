@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal-Website.Anuj</title>
+
+    <link href="https://fonts.cdnfonts.com/css/amazon-ember" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet"> <!-- Google Fonts - Nunito Sans  -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- bootstrap css -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- bootstrap js -->
+
+
+
+    <!-- typeJS is javascript's animation library -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- TypeJS cdn  -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="social">
+        <div id="insta" class="in">
+            <a href="https://www.instagram.com/anuj_v_mehta219/" target="_blank">
+                <span class="textt">Instagram</span>
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        <div id="git" class="in">
+            <a href="https://github.com/anuj219" target="_blank">
+                <span class="textt">GitHub</span>
+                <!-- <i class="fa-solid fa-code-pull-request"></i> -->
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div id="lin" class="in">
+            <a href="https://www.linkedin.com/in/anuj-mehta-1b120622a/" target="_blank">
+                <span class="textt">LinkedIn</span>
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+        <div id="zedge" class="in">
+            <a href="https://www.zedge.net/user" target="_blank">
+                <span class="textt">Zedge</span>
+                <i class="fa fa-paint-brush"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <header id="header">
+        <hr id="navbar_hr" size="5px" color="rgb(90, 59, 12)" style="position: absolute; width: 100%; z-index: -10;background-color: rgb(90, 59, 12);">
+        <!-- have to use both color attr and background color style so as to get proper color -->
+         
+        <nav id="navbar">
+            <div class="left">Portfolio</div>
+
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
+            </div>
+            <div class="end"><i class="fa fa-bars" id="menu-icon" onclick="toggle_menu()"></i>
+                <div class="menu-links" id="menu-links">
+                    <ul>
+                        <li><a href="#firstsect">Me</a></li> <!-- These are know as anchor/ jump links-->
+                        <hr size="0.5px">
+                        <li><a href="#about">About</a></li>
+                        <hr size="0.5px">
+                        <li><a href="#projects">Projects</a></li>
+                        <hr size="0.5px">
+                        <li><a href="#secondsect">Skills</a></li>
+                    </ul>
+                </div>
+                <div id="up"><a href="#"><i class="fas fa-chevron-up"></i></a></div> <!-- Button that takes you up-->
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstsect" id="firstsect">
+            <div class="leftsect">
+                <div>Hello there ! This is <span id="name">Anuj Mehta</span></div>
+                <div>
+                    I am a <br>
+                    < <!-- this < is for the website decor... DONT REMOVE-->
+                </div>
+                <span id="element">
+                    <div>
+                    </div>
+                </span>
+                <div id="bio">
+                    <p><i class="fa fa-graduation-cap" aria-hidden="true" style="font-size: 25px;"></i></p>
+                    <hr size="3px" color="rgb(90, 59, 12)">
+                    <a href="https://xaviers.ac/" style="text-decoration: none; color: rgb(103, 73, 27);">
+                        <p>
+                            &nbsp<i class="fa-solid fa-location-dot" style="font-size: 10px;"></i> St Xaviers College,
+                            Mumbai
+                        </p>
+                    </a>
+
+                    <a href="https://itdept.xaviers.edu/" style="text-decoration: none; color: rgb(103, 73, 27);">
+                        <p>
+                            <i class="fa fa-laptop-code" aria-hidden="true" style="font-size: 10px;"></i>
+                            Computer Science (<small id="grey">Bachelors of Science in Information
+                                Technology</small>)
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="rightsect">
+                <img src="a1.png" alt="normal" id="image" style="z-index: -1;">
+                <hr class="line" size="3px" color="brown">
+                <div class="outer">
+                    <div class="flag-effect">Byte sized humor <br> meets Big dreams </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT section -->
+        <section class="about sects" id="about">
+            <h1>About</h1>
+            <div id="sub">mai hu don</div> <br>
+            <p class="text">
+                Hi.
+                I am a student pursuing Bachelor's of IT in St Xavier's College, Mumbai.
+                My interest for this field started when I uncovered the vast benefits and uses of the most brillaint
+                invention - Mobile phones. Having a creative mind, I have keen interests in problem solving and real
+                world cases. Im also quite skilled(I think I am) in creative designing, digital art and editing and have
+                a good hand
+                on the different softwares in these fields.
+                Currently im very much willing to learn further more in the field of Data science, Artificial
+                Intelligence and Machine learning. Im yet to discover this vast field and lack any experience for the
+                same. <br><br>
+                Other than academics, I have done freelance digital artwork orders. I have posted my digital artworks
+                and paintings on <a href="https://www.zedge.net/ringtones-and-wallpapers"></a>
+                    style="text-decoration: none; color: black;">Zedge. One of my wallpapers has crossed over 0.2M
+                    downloads worldwide! <br>
+                    Find the link to my Zedge profile on your left or visit my instagram page for the same and dont
+                    hesitate to download any of them !!.
+                    <br><br>
+                    Currently I am looking for an internship in any field related to computer science, where I can
+                    divulge
+                    in healthy participation and add to my skill sets.
+                    Gaining knowledge is my top priority. I wish to be the nerdy guy that knows every damn thing about
+                    computers. <br>
+                    As a wise man once said - <span id="funny">KINDLY DONT HOVER</span>.
+                    <audio id="hover-audio">
+                        <source src="sound.mp3" type="audio/mp3">
+                    </audio>
+
+
+            </p>
+            <!-- <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+                </div>
+              
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="hitman.jpeg" class="d-block caro" alt="...">
+                    <div class="carousel-caption">
+                      <h5>First slide</h5>
+                    </div>
+                  </div>
+              
+                  <div class="carousel-item">
+                    <img src="hitman1.jpeg" class="d-block caro" alt="...">
+                    <div class="carousel-caption">
+                      <h5>Second slide</h5>
+                    </div>
+                  </div>
+              
+                  <div class="carousel-item">
+                    <img src="hitman2.jpeg" class="d-block caro" alt="...">
+                    <div class="carousel-caption">
+                      <h5>Third slide</h5>
+                    </div>
+                  </div>
+                </div>
+              
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+              
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div> -->
+
+        </section>
+
+        <section class="projects sects" id="projects">
+            <div class="board">
+                <h1>Projects</h1>
+                <div id="sub">hello world !</div> <br>
+
+                <div>These are the projects ive worked on till now.
+                    I have tired to apply the concepts taught in my class and add some features of my own.
+                    You <br> can see the color theme to be constant accross all of them.
+                    I plan to integrate all these projects into one mega project in the future
+                </div>
+            </div>
+            <div class="content1">
+                <!-- content will be dynamically added here from xml DB using AJAX -->
+                <!-- <div class="content-boxes" id="box1">
+                    <div class="left1"></div>
+                    <div class="right1"></div>
+                </div> -->
+            </div>
+        </section>
+
+        <section class="secondsect sects" id="secondsect">
+            <hr size="2px" color="rgb(90, 59, 12)">
+            <h1>Skills</h1>
+            <div id="sub">kuch nahi aata</div>
+
+            <div class="box">
+                <div class="vertical">
+                    <i class="fa-solid fa-code icons"></i>
+                    <div class="title">
+                        Web Development
+                    </div>
+                    <div class="content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, exercitationem?
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-user-secret icons"></i>
+                    <div class="title">
+                        Cyber-Security
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, rerum!
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-shield icons"></i>
+                    <div class="title">
+                        FireWall Dev
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, rerum!
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-microchip icons"></i>
+                    <div class="title">
+                        Computer-Architecture
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, rerum!</div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-network-wired icons"></i>
+                    <div class="title">
+                        Network Engineering
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, rerum!</div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-bug-slash icons"></i>
+                    <div class="title">
+                        Debug Analysis
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, rerum!</div>
+                </div>
+
+                <div class="vertical">
+                    <i class="fa-solid fa-gears icons"></i>
+                    <div class="title">
+                        Systems Management
+                    </div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, rerum!</div>
+                </div>
+            </div> <!-- End of Box (flow-chart type)-->
+        </section> <!-- End of Second Sect-->
+
+        <footer>
+            <span><i class="fa fa-circle" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i><i
+                    class="fa fa-circle" aria-hidden="true"></i></span>
+            <div><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:notyourcupoftea@gmail.com"
+                    style="text-decoration:none; color:inherit">notyourcupoftea@gmail.com</a></div>
+            <div><i class="fa fa-copyright" aria-hidden="true"></i>copyrights www.anujmehta.isnotsmart.com | All rights
+                reserved</div>
+        </footer>
+
+
+
+
+    <!-- Script req for - Type JS animation -->
+    <!-- imported from github link from google -->
+    <script>
+        var typed = new Typed('#element',
+            {
+                strings: ['Web Developer', 'Graphic Designer', 'Python/Java/C++ programmer', 'R/SQL coder', 'Professional Digital Artist', 'and', 'Human'],
+                //  An array of strings that will be typed out one after another.
+                typeSpeed: 44,
+                cursorChar: ' >'
+                // It will type out each string in the strings array one by one at the speed specified by typeSpeed.
+            }
+        );
+    </script>
+
+    <script>
+
+        // functions to change the image when user hovers on 'bio' (id: change) and revert back once hover removed
+        function change_img() {
+            var changer = document.createElement('img');
+            changer.src = 'a2.png';
+            changer.alt = 'normal';
+            changer.id = 'image';
+
+            var toBeChanged = document.getElementById('image');
+            toBeChanged.replaceWith(changer);
+        }
+        function revert_img() {
+            var changer = document.createElement('img');
+            changer.src = 'a1.png';
+            changer.alt = 'not_normal';
+            changer.id = 'image';
+
+            var toBeChanged = document.getElementById('image');
+            toBeChanged.replaceWith(changer);
+        }
+        document.getElementById('element').addEventListener('mouseover', change_img);
+        document.getElementById('element').addEventListener('mouseout', revert_img);
+
+        // function to display the jump/anchor links (links navigating within the page), when clicked on the 3 bars 
+        //on the right end of navbar
+        function toggle_menu() {
+            if ($('.menu-links').css('display') === 'none') {
+                $('.menu-links').css({'display':'block'})
+                // menu_dis.style.display = 'none'; <-- JavaScript
+                $('main').addClass('blur');
+            }
+            else {
+                $('.menu-links').css({'display':'none'});
+                $('main').removeClass('blur');
+            }
+        }
+
+
+        // glow effect
+        // Create the glow element
+        // const glow = document.createElement('div');
+        // glow.id = 'cursor-glow';
+        // document.body.appendChild(glow);
+
+        // // Move the glow with the mouse
+        // document.addEventListener('mousemove', (e) => {
+        //     const x = e.clientX;
+        //     const y = e.clientY;
+        //     glow.style.transform = `translate(${x}px, ${y}px)`;
+        // });
+
+    </script>
+    <script>
+        const audio = document.getElementById('hover-audio');
+        const hoverDiv = document.getElementById('funny');
+        hoverDiv.addEventListener('mouseenter', () => {
+            audio.play(); // Play audio when mouse enters the div
+        });
+    </script>
+    <script src="script.js"></script>
+</main>
+</body>
+
+
+</html>
