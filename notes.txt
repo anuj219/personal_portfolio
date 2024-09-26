@@ -18,4 +18,38 @@ used :
     imp use of border-top/bottom-left/right-radius (give curve to a specific border part only)
 
     JS and Jquery
-    for tech used bar in project section
+        for tech used bar in project section
+
+
+    used input type radio for rating feature in contact from
+        had to write the input tag 1st and its label after, so when use ~ on a certain radio btn, all label tags along with its own will also be selected..which was otherwise not selecting
+        because if eg
+                        label
+                        input
+
+                        label        
+                        input           (so if we use "~label" on the checked(selected) input tags, all label after that input would be selected)
+                        ----------------------
+                        input
+                        label
+
+                        input
+                        label           (in this way, this inputs label will also be selected along with the next ones)
+
+        then had to reverse direction(css property) of the radiobtn div box ... so radio btns go 5 to 1 in the html...but appear 1 to 5 on page
+        so isse label and its input ka order back to normal ho jata hai, and when you select a btn (suppose 2nd star), then all labels before this radio btn will be gold (due to ~ and direction rtl on it)
+
+        ~ ---> tidle selector that selects all siblings after an element
+
+
+
+    real time rating fetching php code
+        had to use if else and flags so as to toggle selection of the first star only.. without it.. 1st star alone could not be unchecked
+
+        wanted the avg rating to be on each page
+        so added that php code to footer of template.php
+        but when i use require() in the start ... footer comes in the start before host page's content
+        so this is an issue !!
+        solution: made a footer.php file that stores only the footer code -- place this file using require() at the end of each page.. and voila
+
+        

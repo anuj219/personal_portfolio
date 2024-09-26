@@ -70,13 +70,21 @@
                 <i class="fa fa-paint-brush"></i>
             </a>
         </div>
+        <div id="cv" class="in">
+            <a href="cv.pdf" target="_blank">
+                <span class="textt">Resume </span>
+                <i class="fas fa-file-lines" aria-hidden="true"></i>
+            </a>
+        </div>
     </div>
 
+    
 
     <header id="header">
-        <hr id="navbar_hr" size="5px" color="rgb(90, 59, 12)" style="position: absolute; width: 100%; z-index: -10;background-color: rgb(90, 59, 12);">
+        <hr id="navbar_hr" size="5px" color="rgb(90, 59, 12)"
+            style="position: absolute; width: 100%; z-index: -10;background-color: rgb(90, 59, 12);">
         <!-- have to use both color attr and background color style so as to get proper color -->
-         
+
         <nav id="navbar">
             <div class="left">Portfolio</div>
 
@@ -86,10 +94,10 @@
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
-            <div class="end"><i class="fa fa-bars" id="menu-icon" onclick="toggle_menu()"></i>
+            <div class="end"><i class="fa fa-bars" id="menu-icon"></i>
                 <div class="menu-links" id="menu-links">
                     <ul>
-                        <li><a href="#firstsect">Me</a></li> <!-- These are know as anchor/ jump links-->
+                        <li><a href="#">Me</a></li> <!-- These are know as anchor/ jump links-->
                         <hr size="0.5px">
                         <li><a href="#about">About</a></li>
                         <hr size="0.5px">
@@ -98,8 +106,8 @@
                         <li><a href="#secondsect">Skills</a></li>
                     </ul>
                 </div>
-                <div id="up"><a href="#"><i class="fas fa-chevron-up"></i></a></div> <!-- Button that takes you up-->
             </div>
+            <div id="up"><a href="#"><i class="fas fa-chevron-up"></i></a></div> <!-- Button that takes you up-->
         </nav>
     </header>
 
@@ -133,6 +141,18 @@
                         </p>
                     </a>
                 </div>
+                <br><br><br>
+                <div id="bio">
+                    <i class="fas fa-file-lines" aria-hidden="true"></i> CV
+                    <hr size="3px" color="rgb(90, 59, 12)">
+                    <div style="display: flex; flex-direction: column;">
+                        <div style="display: flex; justify-content: space-between; max-width: 25%; align-items: center;"><a href="cv.pdf" style="text-decoration: none; color: rgb(103, 73, 27);"
+                                download>Download</a><i class="fas fa-download cv"></i></div>
+                        <div style="display: flex; justify-content: space-between; max-width: 25%; align-items: center;"><a href="cv.pdf" style="text-decoration: none; color: rgb(103, 73, 27);">View</a>
+                            <i class="fa fa-eye cv" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="rightsect">
@@ -161,20 +181,17 @@
                 same. <br><br>
                 Other than academics, I have done freelance digital artwork orders. I have posted my digital artworks
                 and paintings on <a href="https://www.zedge.net/ringtones-and-wallpapers"></a>
-                    style="text-decoration: none; color: black;">Zedge. One of my wallpapers has crossed over 0.2M
-                    downloads worldwide! <br>
-                    Find the link to my Zedge profile on your left or visit my instagram page for the same and dont
-                    hesitate to download any of them !!.
-                    <br><br>
-                    Currently I am looking for an internship in any field related to computer science, where I can
-                    divulge
-                    in healthy participation and add to my skill sets.
-                    Gaining knowledge is my top priority. I wish to be the nerdy guy that knows every damn thing about
-                    computers. <br>
-                    As a wise man once said - <span id="funny">KINDLY DONT HOVER</span>.
-                    <audio id="hover-audio">
-                        <source src="sound.mp3" type="audio/mp3">
-                    </audio>
+                style="text-decoration: none; color: black;">Zedge. One of my wallpapers has crossed over 0.2M
+                downloads worldwide! <br>
+                Find the link to my Zedge profile on your left or visit my instagram page for the same and dont
+                hesitate to download any of them !!.
+                <br><br>
+                Currently I am looking for an internship in any field related to computer science, where I can
+                divulge
+                in healthy participation and add to my skill sets.
+                Gaining knowledge is my top priority. I wish to be the nerdy guy that knows every damn thing about
+                computers. <br>
+                As a wise man once said - <span id="funny">KINDLY DONT HOVER</span>.
 
 
             </p>
@@ -313,94 +330,86 @@
             </div> <!-- End of Box (flow-chart type)-->
         </section> <!-- End of Second Sect-->
 
-        <footer>
-            <span><i class="fa fa-circle" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i><i
-                    class="fa fa-circle" aria-hidden="true"></i></span>
-            <div><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:notyourcupoftea@gmail.com"
-                    style="text-decoration:none; color:inherit">notyourcupoftea@gmail.com</a></div>
-            <div><i class="fa fa-copyright" aria-hidden="true"></i>copyrights www.anujmehta.isnotsmart.com | All rights
-                reserved</div>
-        </footer>
 
 
 
 
-    <!-- Script req for - Type JS animation -->
-    <!-- imported from github link from google -->
-    <script>
-        var typed = new Typed('#element',
-            {
-                strings: ['Web Developer', 'Graphic Designer', 'Python/Java/C++ programmer', 'R/SQL coder', 'Professional Digital Artist', 'and', 'Human'],
-                //  An array of strings that will be typed out one after another.
-                typeSpeed: 44,
-                cursorChar: ' >'
-                // It will type out each string in the strings array one by one at the speed specified by typeSpeed.
+        <!-- Script req for - Type JS animation -->
+        <!-- imported from github link from google -->
+        <script>
+            var typed = new Typed('#element',
+                {
+                    strings: ['Web Developer', 'Graphic Designer', 'Python/Java/C++ programmer', 'R/SQL coder', 'Professional Digital Artist', 'and', 'Human'],
+                    //  An array of strings that will be typed out one after another.
+                    typeSpeed: 44,
+                    cursorChar: ' >'
+                    // It will type out each string in the strings array one by one at the speed specified by typeSpeed.
+                }
+            );
+        </script>
+
+        <script>
+
+            // functions to change the image when user hovers on 'bio' (id: change) and revert back once hover removed
+            function change_img() {
+                var changer = document.createElement('img');
+                changer.src = 'a2.png';
+                changer.alt = 'normal';
+                changer.id = 'image';
+
+                var toBeChanged = document.getElementById('image');
+                toBeChanged.replaceWith(changer);
             }
-        );
-    </script>
+            function revert_img() {
+                var changer = document.createElement('img');
+                changer.src = 'a1.png';
+                changer.alt = 'not_normal';
+                changer.id = 'image';
 
-    <script>
+                var toBeChanged = document.getElementById('image');
+                toBeChanged.replaceWith(changer);
+            }
+            document.getElementById('element').addEventListener('mouseover', change_img);
+            document.getElementById('element').addEventListener('mouseout', revert_img);
 
-        // functions to change the image when user hovers on 'bio' (id: change) and revert back once hover removed
-        function change_img() {
-            var changer = document.createElement('img');
-            changer.src = 'a2.png';
-            changer.alt = 'normal';
-            changer.id = 'image';
-
-            var toBeChanged = document.getElementById('image');
-            toBeChanged.replaceWith(changer);
-        }
-        function revert_img() {
-            var changer = document.createElement('img');
-            changer.src = 'a1.png';
-            changer.alt = 'not_normal';
-            changer.id = 'image';
-
-            var toBeChanged = document.getElementById('image');
-            toBeChanged.replaceWith(changer);
-        }
-        document.getElementById('element').addEventListener('mouseover', change_img);
-        document.getElementById('element').addEventListener('mouseout', revert_img);
-
-        // function to display the jump/anchor links (links navigating within the page), when clicked on the 3 bars 
-        //on the right end of navbar
-        function toggle_menu() {
-            if ($('.menu-links').css('display') === 'none') {
-                $('.menu-links').css({'display':'block'})
+            // function to display the jump/anchor links (links navigating within the page), when clicked on the 3 bars 
+            //on the right end of navbar
+            $('.end, .menu-links').on('mouseenter mouseover click', function () {
+                // was intially using #menu-links and css me was using .manu-links... but display was not applying on event 
+                // so ig id didnt work over class
+                $('.menu-links').css({ 'display': 'block' })
                 // menu_dis.style.display = 'none'; <-- JavaScript
                 $('main').addClass('blur');
-            }
-            else {
-                $('.menu-links').css({'display':'none'});
+            }).on('mouseout', function () {
+                $('.menu-links').css({ 'display': 'none' });
                 $('main').removeClass('blur');
-            }
-        }
+            })
 
 
-        // glow effect
-        // Create the glow element
-        // const glow = document.createElement('div');
-        // glow.id = 'cursor-glow';
-        // document.body.appendChild(glow);
+            // glow effect
+            // Create the glow element
+            // const glow = document.createElement('div');
+            // glow.id = 'cursor-glow';
+            // document.body.appendChild(glow);
 
-        // // Move the glow with the mouse
-        // document.addEventListener('mousemove', (e) => {
-        //     const x = e.clientX;
-        //     const y = e.clientY;
-        //     glow.style.transform = `translate(${x}px, ${y}px)`;
-        // });
+            // // Move the glow with the mouse
+            // document.addEventListener('mousemove', (e) => {
+            //     const x = e.clientX;
+            //     const y = e.clientY;
+            //     glow.style.transform = `translate(${x}px, ${y}px)`;
+            // });
 
-    </script>
-    <script>
-        const audio = document.getElementById('hover-audio');
-        const hoverDiv = document.getElementById('funny');
-        hoverDiv.addEventListener('mouseenter', () => {
-            audio.play(); // Play audio when mouse enters the div
-        });
-    </script>
-    <script src="script.js"></script>
-</main>
+        </script>
+        <script src="script.js"></script>
+    </main>
+    <footer>
+        <span><i class="fa fa-circle" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i><i
+                class="fa fa-circle" aria-hidden="true"></i></span>
+        <div><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:notyourcupoftea@gmail.com"
+                style="text-decoration:none; color:inherit">notyourcupoftea@gmail.com</a></div>
+        <div><i class="fa fa-copyright" aria-hidden="true"></i>copyrights www.anujmehta.isnotsmart.com | All rights
+            reserved</div>
+    </footer>
 </body>
 
 

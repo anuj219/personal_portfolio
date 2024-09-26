@@ -39,71 +39,58 @@
 
     <link rel="stylesheet" href="style.css">
     <style>
-        h3{
-            background-color:rgb(186, 113, 3);
-        }
-        h1,h2,h3,h4{
-            text-align: center;
-        }
-        .box{
-            display:flex;
-            flex-direction:column;
-            margin:auto;
-            max-width:50%;
-            background-color: rgb(235, 178, 92);
-            border: 2px solid beige;
-            border-radius:20px;
-            min-width: fit-content;
+        .messagebox{
+            position: relative;
+            top: 50px;
+            min-width: 300px;
+            max-width: 52%;
+            padding: 24px;
+            border: 1px solid brown;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 43px 0px rgb(77 48 2);
         }
 
-        #user_name{
-            padding:7px;
-            background-color: rgb(255, 208, 137);
-            border:2px solid transparent;
-            border-radius:15px;
+        element.style {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: brown;
+        }
+
+        .ratingbox{
+            border: 1px solid brown;
+            border-radius: 10px;
+            box-shadow: 0px 0px 43px 0px rgb(77 48 2);
+            margin: auto;
+            width: 50%;
+            padding:24px;
+            min-width: 300px;
+            max-width: 61%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            position: relative;
+            top: 110px;
+        }
+        .user_ratings{
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: brown;
+        }
+        .fa-star{
+            color:yellow;
         }
     </style>
 </head>
 
 <body>
-    <div class="social">
-        <div id="insta" class="in">
-            <a href="https://www.instagram.com/anuj_v_mehta219/" target="_blank">
-                <span class="textt">Instagram</span>
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-        </div>
-        <div id="git" class="in">
-            <a href="https://github.com/anuj219" target="_blank">
-                <span class="textt">GitHub</span>
-                <!-- <i class="fa-solid fa-code-pull-request"></i> -->
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-        <div id="lin" class="in">
-            <a href="https://www.linkedin.com/in/anuj-mehta-1b120622a/" target="_blank">
-                <span class="textt">LinkedIn</span>
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-        </div>
-    </div>
-
-    <header id="header">
-        <nav id="navbar">
-            <div class="left">Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                </ul>
-            </div>
-            <div class="end"><i class="fa fa    -bars" id="menu-icon" onclick="toggle_menu()"></i></div>
-            <div class="menu-links" id="menu-links">
-                <ul>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    
+    <?php require('template.php'); ?> 
 
     <div class="box">
     <?php
@@ -125,28 +112,54 @@
         $email = $_POST['email'];
         $gender = $_POST['r1'];
         $msg = $_POST['msg'];
+        $rating = $_POST['rating'];
     }
 
-    $stmt = $conn->prepare("INSERT INTO user_details (name, email, gender, msg) values (?,?,?,?)");
+    $stmt = $conn->prepare("INSERT INTO user_details (name, email, gender, msg, rating) values (?,?,?,?,?)");
     // prepare statement used to insert the form data into the user_details table
 
-    $stmt->bind_param("ssss", $name, $email, $gender, $msg);
+    $stmt->bind_param("ssssi", $name, $email, $gender, $msg, $rating);
     //  This ensures that the data is properly escaped, preventing SQL injection attacks.
     // "ssss" indicates all parameters are strings.
 
     if($stmt->execute()){
         //  It inserts the provided user data into the database,
         //  executing the SQL query with the actual values instead of the placeholders(?).
-        echo "<h3>New Record Created Successfully</h3>";
-        echo "<h1> Contact details delivered to Anuj</h1><br>";
-        echo "<h2>Ill get back to you soon ! Until next time ; adios <span id='user_name'>$name</span></h2>";
+        echo "<div class=\"messagebox\">";
+        echo "<h3>Thank you for Connecting with this <span id=\"sound\">Coding Freak</span></h3>";
+        echo "<audio id=\"hover-audio\"><source src=\"hacker.mp3\" type=\"audio/mp3\"></audio>";
+        echo "<span>Details Succesfully Delivered</span> <br>";
+        echo "<span>Ill get back to you soon ! Until then, adios <span id=\"user_name\">$name .</span></span>";
+        echo "<small style=\"font-size:0.8rem\"> I finally got an amigo!! Vamos:)</small><br></div>";
     }
     else{
         echo "Error : " . $stmt->error;
     }
+
+    $avg = $conn->prepare("SELECT avg(rating) as average, count(*) as count FROM user_details");
+    $avg->execute();
+    $result = $avg->get_result()->fetch_assoc(); // Fetch the result
+    if($avg->execute()){
+        echo "<div class=\"ratingbox\"><div>Average Rating till now :  <span class='user_ratings'>".round($result['average'], 1)."</span> / 5  <i class='fa fa-star'></i></div>";
+        echo "<div>from  ".$result['count']."   total ratings till now</div></div>";
+    }
+    else{
+        echo "<div class=\"other\">woops! no ratings available yet</dib>";
+    }
+
     $stmt->close();
     $conn->close();
     ?>
     </div>
+
+    <?php require('footer.php'); ?> 
+
+    <script>
+        const audio = document.getElementById('hover-audio');
+        const hoverDiv = document.getElementById('sound');
+        hoverDiv.addEventListener('mouseenter mouseover', () => {
+            audio.play(); // Play audio when mouse enters the div
+        });
+    </script>
 </body>
 </html>
